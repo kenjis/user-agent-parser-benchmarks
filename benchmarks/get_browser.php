@@ -21,7 +21,7 @@ $results = '';
 
 foreach ($agents as $agentString) {
     $r = get_browser($agentString);
-    $results .= sprintf('"%s","%s","%s"' . "\n", $r->platform, $r->browser, $r->version);
+    $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
 }
 
 $bench->end();

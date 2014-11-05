@@ -16,7 +16,7 @@ $results = '';
 
 foreach ($agents as $agentString) {
     $r = $parser->parse($agentString);
-    $results .= sprintf('"%s","%s","%s"' . "\n", $r->os->family, $r->ua->family, $r->ua->toVersion());
+    $results .= json_encode(array($r->os->family, $r->ua->family, $r->ua->toVersion())) . "\n";
 }
 
 $bench->end();
