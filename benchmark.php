@@ -5,7 +5,7 @@ require __DIR__ . '/libs/make_chart_parts.php';
 $output = __DIR__ . '/cache/benchmark-results.json';
 $results = json_decode(file_get_contents($output), true);
 
-
+// Time Benchmark
 $data[] = array('', 'time');  // header
 
 foreach ($results as $parser => $result) {
@@ -13,7 +13,7 @@ foreach ($results as $parser => $result) {
 }
 
 $options = array(
-  'title'  => 'time benchmark',
+  'title'  => 'Time Benchmark',
   'titleTextStyle' => array('fontSize' => 16),
   'hAxis'  => array('title' => 'time',
                     'titleTextStyle' => array('color' => 'blue')),
@@ -26,21 +26,21 @@ $options = array(
 $type = 'ColumnChart';
 list($chart_time, $div_time) = makeChartParts($data, $options, $type);
 
-
+// Memory Benchmark
 $data = array();
 $data[] = array('', 'memory');  // header
 
 foreach ($results as $parser => $result) {
-    $data[] = array($parser, $result['memory']);
+    $data[] = array($parser, ($result['memory']/1024));
 }
 
 $options = array(
-  'title'  => 'memory benchmark',
+  'title'  => 'Memory Benchmark',
   'titleTextStyle' => array('fontSize' => 16),
   'hAxis'  => array('title' => 'peak memory',
                     'titleTextStyle' => array('color' => 'blue')),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 7500000,
-                    'title' => 'Unit: bytes'),
+  'vAxis'  => array('minValue' => 0, 'maxValue' => 7500,
+                    'title' => 'Unit: KB'),
   'width'  => 500,
   'height' => 400,
   'bar'    => array('groupWidth' => '50%'),
