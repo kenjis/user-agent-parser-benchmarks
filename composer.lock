@@ -1,0 +1,407 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "05490b24257e3568d01b2c142ea86a31",
+    "packages": [
+        {
+            "name": "browscap/browscap-php",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/browscap/browscap-php.git",
+                "reference": "4819a25d68edb3658caf70574c4a39078b68ee49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/browscap/browscap-php/zipball/4819a25d68edb3658caf70574c4a39078b68ee49",
+                "reference": "4819a25d68edb3658caf70574c4a39078b68ee49",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phpbrowscap": "src/",
+                    "phpbrowscapTest": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Stoppani",
+                    "email": "jonathan.stoppani@gmail.com"
+                },
+                {
+                    "name": "Thomas Mueller",
+                    "email": "t_mueller_stolzenhain@yahoo.de"
+                },
+                {
+                    "name": "James Titcumb",
+                    "email": "james@asgrim.com"
+                }
+            ],
+            "description": "Standalone replacement for php's native get_browser() function",
+            "homepage": "https://github.com/browscap/browscap-php",
+            "keywords": [
+                "browser",
+                "capabilities",
+                "get_browser",
+                "user agent"
+            ],
+            "time": "2014-10-09 07:43:37"
+        },
+        {
+            "name": "devster/ubench",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devster/ubench.git",
+                "reference": "411f072dc8ee045c80e9f007b3961232b743d992"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devster/ubench/zipball/411f072dc8ee045c80e9f007b3961232b743d992",
+                "reference": "411f072dc8ee045c80e9f007b3961232b743d992",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ubench": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Perret",
+                    "email": "jeremy@devster.org",
+                    "homepage": "https://github.com/devster"
+                }
+            ],
+            "description": "Micro PHP library for benchmarking",
+            "homepage": "https://github.com/devster/ubench",
+            "keywords": [
+                "bench",
+                "benchmark",
+                "library",
+                "micro"
+            ],
+            "time": "2012-12-07 11:31:10"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.5.6",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "6f177fca24200a5b97aef5ce7a5c98124a0f0db0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/6f177fca24200a5b97aef5ce7a5c98124a0f0db0",
+                "reference": "6f177fca24200a5b97aef5ce7a5c98124a0f0db0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-10-05 13:57:04"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v2.5.6",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "4e62fab0060a826561c78b665925b37c870c45f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/4e62fab0060a826561c78b665925b37c870c45f5",
+                "reference": "4e62fab0060a826561c78b665925b37c870c45f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-09-22 09:14:18"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.5.6",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "cf66df4e783e6aade319b273c9bcf9e42aa9b10f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/cf66df4e783e6aade319b273c9bcf9e42aa9b10f",
+                "reference": "cf66df4e783e6aade319b273c9bcf9e42aa9b10f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-10-01 05:50:18"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.5.6",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
+                "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-10-01 05:50:18"
+        },
+        {
+            "name": "tobie/ua-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobie/ua-parser.git",
+                "reference": "e92302f3b96ff5761a85ba2e28291bbbb5474b69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobie/ua-parser/zipball/e92302f3b96ff5761a85ba2e28291bbbb5474b69",
+                "reference": "e92302f3b96ff5761a85ba2e28291bbbb5474b69",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "~2",
+                "symfony/filesystem": "~2",
+                "symfony/finder": "~2",
+                "symfony/yaml": "~2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3"
+            },
+            "bin": [
+                "php/bin/uaparser.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "UAParser": "php/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Olsen",
+                    "email": "dmolsen@gmail.com"
+                }
+            ],
+            "description": "A multi-language port of Browserscope's user agent parser.",
+            "time": "2014-10-27 23:57:23"
+        },
+        {
+            "name": "woothee/woothee",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woothee/woothee-php.git",
+                "reference": "1c8d5781ceac2d17d3c50982a6cd21555135e9cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woothee/woothee-php/zipball/1c8d5781ceac2d17d3c50982a6cd21555135e9cf",
+                "reference": "1c8d5781ceac2d17d3c50982a6cd21555135e9cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.3"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": ">=0.4.0",
+                "phpunit/phpunit": ">=4.1.0",
+                "satooshi/php-coveralls": ">=0.6.0",
+                "symfony/yaml": ">=2.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Woothee\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Yuya Takeyama",
+                    "email": "sign.of.the.wolf.pentagram@gmail.com"
+                }
+            ],
+            "description": "Cross-language UserAgent classifier library, PHP implementation",
+            "keywords": [
+                "user agent",
+                "useragent"
+            ],
+            "time": "2014-10-26 17:05:46"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "tobie/ua-parser": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}
