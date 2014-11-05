@@ -2,7 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$resultsFile = __DIR__ . '/output-ua-parser.txt';
+$cacheDir = __DIR__ . '/../cache';
+$resultsFile = $cacheDir . '/output-ua-parser.txt';
 $agentListFile = __DIR__ . '/../data/ua-list.txt';
 
 $agents = file($agentListFile);

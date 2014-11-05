@@ -4,9 +4,9 @@ ini_set('memory_limit', -1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$resultsFile = __DIR__ . '/output-browscap-php.txt';
-$agentListFile = __DIR__ . '/../data/ua-list.txt';
 $cacheDir = __DIR__ . '/../cache';
+$resultsFile = $cacheDir . '/output-browscap-php.txt';
+$agentListFile = __DIR__ . '/../data/ua-list.txt';
 
 $agents = file($agentListFile);
 
