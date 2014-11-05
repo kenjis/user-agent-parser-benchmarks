@@ -1,1 +1,14 @@
-{"browscap-php":{"time":23.867964029312,"memory":33030144},"ua-parser":{"time":0.71056079864502,"memory":1048576},"woothee":{"time":0.11866497993469,"memory":524288}}
+{
+    "browscap-php": {
+        "time": 25.198320150375,
+        "memory": 33030144
+    },
+    "ua-parser": {
+        "time": 0.71548199653625,
+        "memory": 1048576
+    },
+    "woothee": {
+        "time": 0.12082195281982,
+        "memory": 524288
+    }
+}
