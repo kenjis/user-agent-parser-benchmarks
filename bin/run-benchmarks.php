@@ -6,7 +6,7 @@ $output = __DIR__ . '/../cache/benchmark-results.json';
 $parsers = array('browscap-php', 'ua-parser', 'woothee');
 
 foreach ($parsers as $parser) {
-    echo $parser . PHP_EOL;
+    echo 'Benchmarking ' . $parser . ' ...' . PHP_EOL;
     $result = file_get_contents($url . '/benchmarks/' . $parser .'.php');
     $tmp = explode("\n", $result);
     $time = (float) trim($tmp[0], ' sec');
@@ -18,4 +18,4 @@ foreach ($parsers as $parser) {
     );
 }
 
-file_put_contents($output, json_encode($data));
+file_put_contents($output, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
