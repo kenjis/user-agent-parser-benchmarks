@@ -3,6 +3,7 @@
         "woothee/woothee": "1.0.*",
         "tobie/ua-parser": "dev-master",
         "browscap/browscap-php": "2.0.*",
-        "devster/ubench": "1.1.*"
+        "devster/ubench": "1.1.*",
+        "crossjoin/browscap": "dev-master"
     }
 }

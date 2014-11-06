@@ -8,7 +8,7 @@ $results = json_decode(file_get_contents($output), true);
 // Time Benchmark
 $data[] = array('', 'time', array('role' => 'style'));  // header
 
-$colors = array('purple', 'blue', 'green', 'red');
+$colors = array('yellow', 'purple', 'blue', 'green', 'red');
 foreach ($results as $parser => $result) {
     $data[] = array($parser, $result['time'], array_shift($colors));
 }
