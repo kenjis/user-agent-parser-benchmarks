@@ -1,6 +1,6 @@
 # PHP User Agent Parser Benchmarks
 
-## Usage
+## How to Benchmark
 
 ~~~
 $ git clone https://github.com/kenjis/user-agent-parser-benchmarks.git
@@ -8,6 +8,9 @@ $ cd user-agent-parser-benchmarks
 $ composer install
 $ sh bin/prepare.sh
 $ php -S localhost:8000
+~~~
+
+~~~
 $ php bin/run-benchmarks.php
 ~~~
 
