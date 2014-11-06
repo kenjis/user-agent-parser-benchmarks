@@ -3,6 +3,7 @@
 ini_set('memory_limit', -1);
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
 $resultsFile = $cacheDir . '/output-browscap.txt';
@@ -20,7 +21,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $browscap->getBrowser($agentString);
     $results .= json_encode(array($r->Platform, $r->Browser, $r->Version)) . "\n";
-    break;  // remove if you want to check all the list
+    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();

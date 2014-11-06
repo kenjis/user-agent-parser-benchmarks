@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
 $resultsFile = $cacheDir . '/output-ua-parser.txt';
@@ -17,7 +18,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $parser->parse($agentString);
     $results .= json_encode(array($r->os->family, $r->ua->family, $r->ua->toVersion())) . "\n";
-    break;  // remove if you want to check all the list
+    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();

@@ -1,7 +1,8 @@
 <?php
 
-$url = 'http://localhost:8000';
-//$url = 'http://localhost/user-agent-parser-benchmarks/';
+require __DIR__ . '/../config.php';
+
+$url = $config['baseUrl'];
 $output = __DIR__ . '/../cache/benchmark-results.json';
 
 $parsers = array('crossjoin-browscap', 'get_browser', 'browscap-php', 'ua-parser', 'woothee');

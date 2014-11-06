@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
 $resultsFile = $cacheDir . '/output-get_browser.txt';
@@ -22,7 +23,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = get_browser($agentString);
     $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
-    break;  // remove if you want to check all the list
+    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();

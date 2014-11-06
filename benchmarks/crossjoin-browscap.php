@@ -3,6 +3,7 @@
 ini_set('memory_limit', -1);
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
 $resultsFile = $cacheDir . '/output-crossjoin-browscap-php.txt';
@@ -19,7 +20,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $browscap->getBrowser($agentString)->getData();
     $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
-    break;  // remove if you want to check all the list
+    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();
