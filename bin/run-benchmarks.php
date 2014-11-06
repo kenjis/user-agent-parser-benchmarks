@@ -1,6 +1,7 @@
 <?php
 
 $url = 'http://localhost:8000';
+//$url = 'http://localhost/user-agent-parser-benchmarks/';
 $output = __DIR__ . '/../cache/benchmark-results.json';
 
 $parsers = array('crossjoin-browscap', 'get_browser', 'browscap-php', 'ua-parser', 'woothee');
@@ -18,4 +19,4 @@ foreach ($parsers as $parser) {
     );
 }
 
-file_put_contents($output, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+file_put_contents($output, json_encode($data));
