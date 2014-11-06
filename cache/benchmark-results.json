@@ -1,18 +1,1 @@
-{
-    "get_browser": {
-        "time": 1.3665368556976,
-        "memory": 262144
-    },
-    "browscap-php": {
-        "time": 0.15430593490601,
-        "memory": 8388608
-    },
-    "ua-parser": {
-        "time": 0.010310888290405,
-        "memory": 524288
-    },
-    "woothee": {
-        "time": 0.0025370121002197,
-        "memory": 524288
-    }
-}
+{"crossjoin-browscap":{"time":0.00087594985961914,"memory":524288},"get_browser":{"time":1.3734579086304,"memory":262144},"browscap-php":{"time":0.13754391670227,"memory":8388608},"ua-parser":{"time":0.0085458755493164,"memory":524288},"woothee":{"time":0.0011758804321289,"memory":524288}}
