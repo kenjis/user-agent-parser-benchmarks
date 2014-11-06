@@ -5,7 +5,7 @@ require __DIR__ . '/../config.php';
 $url = $config['baseUrl'];
 $output = __DIR__ . '/../cache/benchmark-results.json';
 
-$parsers = array('crossjoin-browscap', 'get_browser', 'browscap-php', 'ua-parser', 'woothee');
+$parsers = $config['parsers'];
 
 foreach ($parsers as $parser) {
     echo 'Benchmarking ' . $parser . ' ...';

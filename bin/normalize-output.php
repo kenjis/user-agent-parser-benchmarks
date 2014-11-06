@@ -1,6 +1,8 @@
 <?php
 
-$parsers = array('crossjoin-browscap', 'get_browser', 'browscap-php', 'ua-parser', 'woothee');
+require __DIR__ . '/../config.php';
+
+$parsers = $config['parsers'];
 
 foreach ($parsers as $parser) {
     $input = __DIR__ . '/../cache/output-' . $parser . '.txt';
