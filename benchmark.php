@@ -5,7 +5,7 @@ require __DIR__ . '/libs/make_chart_parts.php';
 $output = __DIR__ . '/cache/benchmark-results.json';
 $results = json_decode(file_get_contents($output), true);
 
-$barColors = array('yellow', 'purple', 'blue', 'green', 'red');
+$barColors = array('blue', 'red', 'orange', 'green', 'purple');
 
 // Time Benchmark
 $data[] = array('', 'time', array('role' => 'style'));  // header
@@ -21,10 +21,10 @@ $options = array(
   'titleTextStyle' => array('fontSize' => 16),
   'hAxis'  => array('title' => 'time (sec)',
                     'titleTextStyle' => array('bold' => true)),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 0.25),
+  'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
   'width'  => 500,
   'height' => 400,
-  'bar'    => array('groupWidth' => '50%'),
+  'bar'    => array('groupWidth' => '90%'),
   'legend' => array('position' => 'none')
 );
 $type = 'ColumnChart';
@@ -47,7 +47,7 @@ $options = array(
   'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
   'width'  => 500,
   'height' => 400,
-  'bar'    => array('groupWidth' => '50%'),
+  'bar'    => array('groupWidth' => '90%'),
   'legend' => array('position' => 'none')
 );
 $type = 'ColumnChart';
