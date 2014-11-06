@@ -17,9 +17,9 @@ foreach ($results as $parser => $result) {
 $options = array(
   'title'  => 'Time Benchmark',
   'titleTextStyle' => array('fontSize' => 16),
-  'hAxis'  => array('title' => 'time'),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 0.25,
-                    'title' => 'Unit: secs'),
+  'hAxis'  => array('title' => 'time (sec)',
+                    'titleTextStyle' => array('bold' => true)),
+  'vAxis'  => array('minValue' => 0, 'maxValue' => 0.25),
   'width'  => 500,
   'height' => 400,
   'bar'    => array('groupWidth' => '50%'),
@@ -34,15 +34,15 @@ $data[] = array('', 'memory', array('role' => 'style'));  // header
 
 $colors = array('purple', 'blue', 'green', 'red');
 foreach ($results as $parser => $result) {
-    $data[] = array($parser, ($result['memory']/1024), array_shift($colors));
+    $data[] = array($parser, ($result['memory']/1024)/1024, array_shift($colors));
 }
 
 $options = array(
   'title'  => 'Memory Benchmark',
   'titleTextStyle' => array('fontSize' => 16),
-  'hAxis'  => array('title' => 'peak memory'),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 1000,
-                    'title' => 'Unit: KB'),
+  'hAxis'  => array('title' => 'peak memory (MB)',
+                    'titleTextStyle' => array('bold' => true)),
+  'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
   'width'  => 500,
   'height' => 400,
   'bar'    => array('groupWidth' => '50%'),
