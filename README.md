@@ -15,6 +15,8 @@ See <http://localhost:8000/benchmark.php>.
 
 ## Reference
 
+* http://php.net/get_browser
 * https://github.com/browscap/browscap-php
 * https://github.com/tobie/ua-parser
 * https://github.com/woothee/woothee-php
+* https://github.com/crossjoin/Browscap
