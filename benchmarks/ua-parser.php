@@ -17,6 +17,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $parser->parse($agentString);
     $results .= json_encode(array($r->os->family, $r->ua->family, $r->ua->toVersion())) . "\n";
+    break;  // remove if you want to check all the list
 }
 
 $bench->end();

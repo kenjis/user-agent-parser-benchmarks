@@ -22,6 +22,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = get_browser($agentString);
     $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
+    break;  // remove if you want to check all the list
 }
 
 $bench->end();

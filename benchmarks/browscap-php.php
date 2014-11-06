@@ -20,6 +20,7 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $browscap->getBrowser($agentString);
     $results .= json_encode(array($r->Platform, $r->Browser, $r->Version)) . "\n";
+    break;  // remove if you want to check all the list
 }
 
 $bench->end();

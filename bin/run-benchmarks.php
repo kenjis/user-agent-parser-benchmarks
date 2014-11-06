@@ -3,7 +3,7 @@
 $url = 'http://localhost:8000';
 $output = __DIR__ . '/../cache/benchmark-results.json';
 
-$parsers = array('browscap-php', 'ua-parser', 'woothee');
+$parsers = array('get_browser', 'browscap-php', 'ua-parser', 'woothee');
 
 foreach ($parsers as $parser) {
     echo 'Benchmarking ' . $parser . ' ...' . PHP_EOL;
