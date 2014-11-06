@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
-$resultsFile = $cacheDir . '/output-browscap.txt';
+$resultsFile = $cacheDir . '/output-browscap-php.txt';
 $agentListFile = __DIR__ . '/../data/ua-list.txt';
 
 $agents = file($agentListFile);

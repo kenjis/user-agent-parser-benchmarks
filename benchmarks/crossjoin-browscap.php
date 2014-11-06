@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config.php';
 
 $cacheDir = __DIR__ . '/../cache';
-$resultsFile = $cacheDir . '/output-crossjoin-browscap-php.txt';
+$resultsFile = $cacheDir . '/output-crossjoin-browscap.txt';
 $agentListFile = __DIR__ . '/../data/ua-list.txt';
 
 $agents = file($agentListFile);
