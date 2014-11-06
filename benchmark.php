@@ -5,10 +5,12 @@ require __DIR__ . '/libs/make_chart_parts.php';
 $output = __DIR__ . '/cache/benchmark-results.json';
 $results = json_decode(file_get_contents($output), true);
 
+$barColors = array('yellow', 'purple', 'blue', 'green', 'red');
+
 // Time Benchmark
 $data[] = array('', 'time', array('role' => 'style'));  // header
 
-$colors = array('yellow', 'purple', 'blue', 'green', 'red');
+$colors = $barColors;
 foreach ($results as $parser => $result) {
     $data[] = array($parser, $result['time'], array_shift($colors));
 }
@@ -32,7 +34,7 @@ list($chart_time, $div_time) = makeChartParts($data, $options, $type);
 $data = array();
 $data[] = array('', 'memory', array('role' => 'style'));  // header
 
-$colors = array('purple', 'blue', 'green', 'red');
+$colors = $barColors;
 foreach ($results as $parser => $result) {
     $data[] = array($parser, ($result['memory']/1024)/1024, array_shift($colors));
 }
@@ -52,7 +54,7 @@ $type = 'ColumnChart';
 list($chart_mem, $div_mem) = makeChartParts($data, $options, $type);
 ?>
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>User Agent Parser Benchmarks</title>
