@@ -7,7 +7,8 @@ $cacheDir = __DIR__ . '/../cache';
 $resultsFile = $cacheDir . '/output-get_browser.txt';
 $agentListFile = __DIR__ . '/../data/ua-list.txt';
 
-if (get_browser('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040803 Firefox/0.9.3') === false) {
+$testAgent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040803 Firefox/0.9.3';
+if (get_browser($testAgent) === false) {
     echo 'Error: Can\'t use get_browser(). Please set browscap in php.ini.', PHP_EOL;
     echo 'browscap = ' . realpath($cacheDir . '/browscap.ini') . PHP_EOL;
     exit(1);
