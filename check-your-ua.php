@@ -87,5 +87,11 @@ echo h($data[$parser][2]);
         <input type="submit" value="Send">
     </form>
 </div>
+
+<hr>
+
+<footer>
+    <p style="text-align: right">This page is a part of <a href="https://github.com/kenjis/user-agent-parser-benchmarks">user-agent-parser-benchmarks</a>.</p>
+</footer>
 </body>
 </html>
