@@ -58,23 +58,23 @@ $data['woothee'] = array($r['os'], $r['name'], $r['version']);
 <body>
 <div>
     Your user agent string:<br>
-    <pre>
+<pre>
 <?php
 echo '  ' . h($userAgent);
 ?>
-    </pre>
+</pre>
 </div>
 
 <?php foreach ($config['parsers'] as $parser): ?>
 <div>
     <?php echo h($parser); ?>:<br>
-    <pre>
+<pre>
 <?php
 echo '  ' . h($data[$parser][0]) . ' / ';
 echo h($data[$parser][1]) . ' / ';
 echo h($data[$parser][2]);
 ?>
-    </pre>
+</pre>
 </div>
 <?php endforeach; ?>
 
