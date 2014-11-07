@@ -27,6 +27,10 @@ $ php bin/run-benchmarks.php
 
 See <http://localhost:8000/benchmark.php>.
 
+## Check your User Agent
+
+I can check your user agent at <http://localhost:8000/check-your-ua.php>.
+
 ## Reference
 
 * http://php.net/get_browser
