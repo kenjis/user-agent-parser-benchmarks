@@ -1,5 +1,15 @@
 # PHP User Agent Parser Benchmarks
 
+## Results
+
+|parser            |time            |peak memory|
+|------------------|----------------|----------:|
+|get_browser()     |47.569047927856 |524288     |
+|browscap-php      |1.1221010684967 |13631488   |
+|crossjoin\Browscap|3.0749452114105 |1572864    |
+|ua-parser         |0.13834619522095|786432     |
+|woothee-php       |0.19455099105835|524288     |
+
 ## How to Benchmark
 
 Install source code.
