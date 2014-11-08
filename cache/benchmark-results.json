@@ -1,1 +1,1 @@
-{"crossjoin-browscap":{"time":0.00087594985961914,"memory":524288},"get_browser":{"time":1.3734579086304,"memory":262144},"browscap-php":{"time":0.13754391670227,"memory":8388608},"ua-parser":{"time":0.0085458755493164,"memory":524288},"woothee":{"time":0.0011758804321289,"memory":524288}}
+{"get_browser":{"time":47.569047927856,"memory":524288},"browscap-php":{"time":1.1221010684967,"memory":13631488},"crossjoin-browscap":{"time":3.0749452114105,"memory":1572864},"ua-parser":{"time":0.13834619522095,"memory":786432},"woothee":{"time":0.19455099105835,"memory":524288}}
