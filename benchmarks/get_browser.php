@@ -1,5 +1,7 @@
 <?php
 
+ini_set('max_execution_time', 300);
+
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../config.php';
 
