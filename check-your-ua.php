@@ -16,16 +16,6 @@ if (isset($_GET['user_agent']) && trim($_GET['user_agent']) !== '') {
 
 $bench = new Ubench;
 
-// crossjoin-browscap
-$bench->start();
-$browscap = new \Crossjoin\Browscap\Browscap();
-$r = $browscap->getBrowser($userAgent)->getData();
-$bench->end();
-$data['crossjoin-browscap'] = array(
-    $r->platform, $r->browser, $r->version, $bench->getTime(true)
-);
-
-
 // get_browser
 $testAgent = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)';
 if (@get_browser($testAgent) === false) {
@@ -48,6 +38,18 @@ $r = $browscap->getBrowser($userAgent);
 $bench->end();
 $data['browscap-php'] = array(
     $r->Platform, $r->Browser, $r->Version, $bench->getTime(true)
+);
+
+// crossjoin-browscap
+$bench->start();
+\Crossjoin\Browscap\Cache\File::setCacheDirectory($cacheDir);
+$updater = new \Crossjoin\Browscap\Updater\None();
+\Crossjoin\Browscap\Browscap::setUpdater($updater);
+$browscap = new \Crossjoin\Browscap\Browscap();
+$r = $browscap->getBrowser($userAgent)->getData();
+$bench->end();
+$data['crossjoin-browscap'] = array(
+    $r->platform, $r->browser, $r->version, $bench->getTime(true)
 );
 
 // ua-parser

@@ -14,6 +14,9 @@ $agents = file($agentListFile);
 $bench = new Ubench;
 $bench->start();
 
+\Crossjoin\Browscap\Cache\File::setCacheDirectory($cacheDir);
+$updater = new \Crossjoin\Browscap\Updater\None();
+\Crossjoin\Browscap\Browscap::setUpdater($updater);
 $browscap = new \Crossjoin\Browscap\Browscap();
 $results = '';
 
