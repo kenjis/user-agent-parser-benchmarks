@@ -14,40 +14,59 @@ if (isset($_GET['user_agent']) && trim($_GET['user_agent']) !== '') {
     $userAgent = $_SERVER['HTTP_USER_AGENT'];
 }
 
+$bench = new Ubench;
+
 // crossjoin-browscap
+$bench->start();
 $browscap = new \Crossjoin\Browscap\Browscap();
 $r = $browscap->getBrowser($userAgent)->getData();
+$bench->end();
 $data['crossjoin-browscap'] = array(
-    $r->platform, $r->browser, $r->version
+    $r->platform, $r->browser, $r->version, $bench->getTime(true)
 );
+
 
 // get_browser
 $testAgent = 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)';
 if (@get_browser($testAgent) === false) {
     $data['get_browser'] = array('n/a', 'n/a', 'n/a');
 } else {
+    $bench->start();
     $r = get_browser($userAgent);
-    $data['get_browser'] = array($r->platform, $r->browser, $r->version);
+    $bench->end();
+    $data['get_browser'] = array(
+        $r->platform, $r->browser, $r->version, $bench->getTime(true)
+    );
 }
 
 // browscap-php
+$bench->start();
 $cacheDir = __DIR__ . '/cache';
 $browscap = new phpbrowscap\Browscap($cacheDir);
 $browscap->doAutoUpdate = false;
 $r = $browscap->getBrowser($userAgent);
+$bench->end();
 $data['browscap-php'] = array(
-    $r->Platform, $r->Browser, $r->Version
+    $r->Platform, $r->Browser, $r->Version, $bench->getTime(true)
 );
 
 // ua-parser
+$bench->start();
 $parser = UAParser\Parser::create();
 $r = $parser->parse($userAgent);
-$data['ua-parser'] = array($r->os->family, $r->ua->family, $r->ua->toVersion());
+$bench->end();
+$data['ua-parser'] = array(
+    $r->os->family, $r->ua->family, $r->ua->toVersion(), $bench->getTime(true)
+);
 
 // woothee
+$bench->start();
 $parser = new \Woothee\Classifier;
 $r = $parser->parse($userAgent);
-$data['woothee'] = array($r['os'], $r['name'], $r['version']);
+$bench->end();
+$data['woothee'] = array(
+    $r['os'], $r['name'], $r['version'], $bench->getTime(true)
+);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +92,7 @@ echo '  ' . h($userAgent);
 echo '  ' . h($data[$parser][0]) . ' / ';
 echo h($data[$parser][1]) . ' / ';
 echo h($data[$parser][2]);
+echo ' (' . h($data[$parser][3]) . ' sec)';
 ?>
 </pre>
 </div>
