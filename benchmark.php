@@ -71,5 +71,11 @@ echo $chart_time, $chart_mem;
 echo $div_time, $div_mem;
 ?>
 </div>
+
+<hr>
+
+<footer>
+    <p style="text-align: right"><a href="./">Back</a> | This page is a part of <a href="https://github.com/kenjis/user-agent-parser-benchmarks">user-agent-parser-benchmarks</a>.</p>
+</footer>
 </body>
 </html>
