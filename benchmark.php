@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/libs/make_chart_parts.php';
+require __DIR__ . '/libs/php-recipe-2nd/make_chart_parts.php';
 
 $output = __DIR__ . '/cache/benchmark-results.json';
 $results = json_decode(file_get_contents($output), true);
