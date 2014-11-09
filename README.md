@@ -2,13 +2,13 @@
 
 ## Results
 
-|parser            |time            |peak memory|
-|------------------|----------------|----------:|
-|get_browser()     |47.569047927856 |524288     |
-|browscap-php      |1.1221010684967 |13631488   |
-|crossjoin\Browscap|3.0749452114105 |1572864    |
-|ua-parser         |0.13834619522095|786432     |
-|woothee-php       |0.19455099105835|524288     |
+|parser            |time               |peak memory|
+|------------------|-------------------|----------:|
+|get_browser()     |46.237493991852    |524288     |
+|browscap-php      | 0.95736503601074  |13369344   |
+|crossjoin\Browscap| 2.8503410816193   |1310720    |
+|ua-parser         | 0.10208678245544  |786432     |
+|woothee-php       | 0.0087931156158447|524288     |
 
 ## How to Benchmark
 
@@ -45,6 +45,6 @@ You can check your user agent at <http://localhost:8000/check-your-ua.php>.
 
 * http://php.net/get_browser
 * https://github.com/browscap/browscap-php
+* https://github.com/crossjoin/Browscap
 * https://github.com/tobie/ua-parser
 * https://github.com/woothee/woothee-php
-* https://github.com/crossjoin/Browscap
