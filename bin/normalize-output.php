@@ -55,7 +55,9 @@ function normalize_woothee(array $browser)
     if ($browser[2] === 'UNKNOWN') $browser[2] = '';
     if ($browser[2] !== '') {
         $tmp = explode('.', $browser[2]);
-        $browser[2] = $tmp[0] . '.' . $tmp[1];
+        if (count($tmp) > 2) {
+            $browser[2] = $tmp[0] . '.' . $tmp[1];
+        }
     }
 
     return $browser;
