@@ -69,10 +69,11 @@ foreach ($parsers as $parser) {
 
     $lines = file($input);
 
-    $newLine = '';
+    $newLines = '';
     foreach ($lines as $line) {
         $browser = json_decode($line);
 
+        $func = null;
         if ($parser === 'get_browser' || $parser === 'browscap-php' || $parser === 'crossjoin-browscap') {
             $func = 'normalize_browscap';
         } elseif ($parser === 'ua-parser') {
@@ -80,10 +81,12 @@ foreach ($parsers as $parser) {
         } elseif ($parser === 'woothee') {
             $func = 'normalize_woothee';
         }
-        $browser = $func($browser);
+        if ($func !== null) {
+            $browser = $func($browser);
+        }
 
-        $newLine .= json_encode($browser) . "\n";
+        $newLines .= json_encode($browser) . "\n";
     }
 
-    file_put_contents($output, $newLine);
+    file_put_contents($output, $newLines);
 }
