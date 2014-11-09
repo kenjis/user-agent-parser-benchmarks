@@ -4,11 +4,11 @@
 
 |parser            |time               |peak memory|
 |------------------|-------------------|----------:|
-|get_browser()     |46.237493991852    |524288     |
-|browscap-php      | 0.95736503601074  |13369344   |
-|crossjoin\Browscap| 2.8503410816193   |1310720    |
-|ua-parser         | 0.10208678245544  |786432     |
-|woothee-php       | 0.0087931156158447|524288     |
+|[get_browser()](http://php.net/get_browser)                |46.237493991852    |524288     |
+|[browscap-php](https://github.com/browscap/browscap-php)   | 0.95736503601074  |13369344   |
+|[crossjoin\Browscap](https://github.com/crossjoin/Browscap)| 2.8503410816193   |1310720    |
+|[ua-parser](https://github.com/tobie/ua-parser)            | 0.10208678245544  |786432     |
+|[woothee-php](https://github.com/woothee/woothee-php)      | 0.0087931156158447|524288     |
 
 ## How to Benchmark
 
