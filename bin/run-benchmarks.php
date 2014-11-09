@@ -14,7 +14,7 @@ foreach ($parsers as $parser) {
     $time = (float) trim($tmp[0], ' sec');
     $memory = (int) trim($tmp[1], ' bytes');
     echo "\t" . substr($time, 0, 9) . 'secs ' . "\t" . ($memory/1024)/1024 . 'MB' . PHP_EOL;
-    
+
     $data[$parser] = array(
         'time' => $time,
         'memory' => $memory,
