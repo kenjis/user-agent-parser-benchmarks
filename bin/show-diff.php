@@ -3,7 +3,7 @@
 require __DIR__ . '/../config.php';
 
 $dataDir = __DIR__ . '/../data';
-$cacheDir = __DIR__ . '/../cache';
+$cacheDir = $config['cacheDir'];
 
 $userAgentStringsFile = $dataDir . '/ua-list-all.txt';
 $userAgentStrings = file($userAgentStringsFile);
