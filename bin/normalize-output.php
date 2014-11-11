@@ -63,9 +63,9 @@ function normalize_woothee(array $browser)
     return $browser;
 }
 
-foreach ($parsers as $parser) {
-    $input = __DIR__ . '/../cache/output-' . $parser . '.txt';
-    $output = __DIR__ . '/../cache/normalized-output-' . $parser . '.txt';
+foreach ($parsers as $id => $parser) {
+    $input = $config['cacheDir'] . '/output-' . $parser . '.txt';
+    $output = $config['cacheDir'] . '/normalized-output-' . $parser . '.txt';
 
     $lines = file($input);
 

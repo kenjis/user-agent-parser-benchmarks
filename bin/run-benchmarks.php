@@ -3,7 +3,7 @@
 require __DIR__ . '/../config.php';
 
 $url = $config['baseUrl'];
-$output = __DIR__ . '/../cache/benchmark-results.json';
+$output = $config['cacheDir']  . '/benchmark-results.json';
 
 $parsers = $config['parsers'];
 

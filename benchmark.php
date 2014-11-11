@@ -1,8 +1,9 @@
 <?php
 
 require __DIR__ . '/libs/php-recipe-2nd/make_chart_parts.php';
+require __DIR__ . '/config.php';
 
-$output = __DIR__ . '/cache/benchmark-results.json';
+$output = $config['cacheDir'] . '/benchmark-results.json';
 $results = json_decode(file_get_contents($output), true);
 
 $barColors = array('blue', 'red', 'orange', 'green', 'purple');
