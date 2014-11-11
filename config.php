@@ -5,7 +5,6 @@ $config = array(
     'cacheDir' => __DIR__ . '/cache',
     'userAgentListFile' => __DIR__ . '/data/ua-list-100-sample01.txt',
 //    'userAgentListFile' => __DIR__ . '/data/ua-list-all.txt',
-    'parseAll' => true,
 
     'baseUrl' => 'http://localhost:8000',
 //    'baseUrl' => 'http://localhost/user-agent-parser-benchmarks/',

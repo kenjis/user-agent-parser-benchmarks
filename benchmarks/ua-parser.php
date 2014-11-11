@@ -18,7 +18,6 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $parser->parse($agentString);
     $results .= json_encode(array($r->os->family, $r->ua->family, $r->ua->toVersion())) . "\n";
-    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();

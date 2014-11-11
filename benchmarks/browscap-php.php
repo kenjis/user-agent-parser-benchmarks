@@ -21,7 +21,6 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = $browscap->getBrowser($agentString);
     $results .= json_encode(array($r->Platform, $r->Browser, $r->Version)) . "\n";
-    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();

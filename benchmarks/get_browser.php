@@ -26,7 +26,6 @@ $results = '';
 foreach ($agents as $agentString) {
     $r = get_browser($agentString);
     $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
-    if ($config['parseAll'] === false) break 1;
 }
 
 $bench->end();
