@@ -73,15 +73,8 @@ foreach ($parsers as $id => $parser) {
     foreach ($lines as $line) {
         $browser = json_decode($line);
 
-        $func = null;
-        if ($parser === 'get_browser' || $parser === 'browscap-php' || $parser === 'crossjoin-browscap') {
-            $func = 'normalize_browscap';
-        } elseif ($parser === 'ua-parser') {
-            $func = 'normalize_ua_parser';
-        } elseif ($parser === 'woothee') {
-            $func = 'normalize_woothee';
-        }
-        if ($func !== null) {
+        $func = 'normalize_' . $config['normalizer'][$id];
+        if ($func != '') {
             $browser = $func($browser);
         }
 
