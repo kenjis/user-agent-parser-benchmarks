@@ -41,6 +41,23 @@ See <http://localhost:8000/benchmark.php>.
 
 You can check your user agent at <http://localhost:8000/check-your-ua.php>.
 
+## How to Check Differences of Detections
+
+Prepare your user agent strings list file and set `userAgentListFile` value in `config.php`.
+
+Run benchmarks and normalize.
+
+~~~
+$ php bin/run-benchmarks.php
+$ php bin/normalize-output.php
+~~~
+
+Show differences.
+
+~~~
+$ php bin/show-diff.php
+~~~
+
 ## Reference
 
 * http://php.net/get_browser
