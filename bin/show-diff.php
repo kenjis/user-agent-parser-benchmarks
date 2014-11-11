@@ -16,7 +16,7 @@ foreach ($parsers as $parser) {
     $normalized[$parser] = file($file);
     $count = count($normalized[$parser]);
     if ($countUserAgent !== $count) {
-        echo 'all: ' . $countAll . ' <> ' .$parser . ': ' . $count . PHP_EOL;
+        echo 'all: ' . $countUserAgent . ' <> ' .$parser . ': ' . $count . PHP_EOL;
         exit(1);
     }
 }
