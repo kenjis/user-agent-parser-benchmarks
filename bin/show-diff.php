@@ -5,7 +5,7 @@ require __DIR__ . '/../config.php';
 $dataDir = __DIR__ . '/../data';
 $cacheDir = $config['cacheDir'];
 
-$userAgentStringsFile = $dataDir . '/ua-list-all.txt';
+$userAgentStringsFile = $config['userAgentListFile'];
 $userAgentStrings = file($userAgentStringsFile);
 $countUserAgent = count($userAgentStrings);
 
