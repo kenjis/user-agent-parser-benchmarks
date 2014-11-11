@@ -74,7 +74,7 @@ foreach ($parsers as $id => $parser) {
         $browser = json_decode($line);
 
         $func = 'normalize_' . $config['normalizer'][$id];
-        if ($func != '') {
+        if ($func !== 'normalize_') {
             $browser = $func($browser);
         }
 
