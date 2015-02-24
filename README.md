@@ -2,6 +2,8 @@
 
 ## Results
 
+**The results turned out to be misleading. I'll fix the benchmarks.**
+
 |parser            |time               |peak memory|
 |------------------|-------------------|----------:|
 |[get_browser()](http://php.net/get_browser)                |46.237493991852    |524288     |
