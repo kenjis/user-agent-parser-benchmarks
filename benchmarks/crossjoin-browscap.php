@@ -14,13 +14,13 @@ $agents = file($agentListFile);
 $bench = new Ubench;
 $bench->start();
 
-\Crossjoin\Browscap\Cache\File::setCacheDirectory($cacheDir);
-$updater = new \Crossjoin\Browscap\Updater\None();
-\Crossjoin\Browscap\Browscap::setUpdater($updater);
-$browscap = new \Crossjoin\Browscap\Browscap();
 $results = '';
 
 foreach ($agents as $agentString) {
+    \Crossjoin\Browscap\Cache\File::setCacheDirectory($cacheDir);
+    $updater = new \Crossjoin\Browscap\Updater\None();
+    \Crossjoin\Browscap\Browscap::setUpdater($updater);
+    $browscap = new \Crossjoin\Browscap\Browscap();
     $r = $browscap->getBrowser($agentString)->getData();
     $results .= json_encode(array($r->platform, $r->browser, $r->version)) . "\n";
 }

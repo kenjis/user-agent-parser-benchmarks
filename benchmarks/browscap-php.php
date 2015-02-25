@@ -14,11 +14,11 @@ $agents = file($agentListFile);
 $bench = new Ubench;
 $bench->start();
 
-$browscap = new phpbrowscap\Browscap($cacheDir);
-$browscap->doAutoUpdate = false;
 $results = '';
 
 foreach ($agents as $agentString) {
+    $browscap = new phpbrowscap\Browscap($cacheDir);
+    $browscap->doAutoUpdate = false;
     $r = $browscap->getBrowser($agentString);
     $results .= json_encode(array($r->Platform, $r->Browser, $r->Version)) . "\n";
 }

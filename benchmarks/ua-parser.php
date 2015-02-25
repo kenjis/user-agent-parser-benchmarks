@@ -12,10 +12,10 @@ $agents = file($agentListFile);
 $bench = new Ubench;
 $bench->start();
 
-$parser = UAParser\Parser::create();
 $results = '';
 
 foreach ($agents as $agentString) {
+    $parser = UAParser\Parser::create();
     $r = $parser->parse($agentString);
     $results .= json_encode(array($r->os->family, $r->ua->family, $r->ua->toVersion())) . "\n";
 }

@@ -12,10 +12,10 @@ $agents = file($agentListFile);
 $bench = new Ubench;
 $bench->start();
 
-$parser = new \Woothee\Classifier;
 $results = '';
 
 foreach ($agents as $agentString) {
+    $parser = new \Woothee\Classifier;
     $r = $parser->parse($agentString);
     $results .= json_encode(array($r['os'], $r['name'], $r['version'])) . "\n";
 }
