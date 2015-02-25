@@ -2,15 +2,17 @@
 
 ## Results
 
-**The results turned out to be misleading. I'll fix the benchmarks.**
-
 |parser            |time               |peak memory|
 |------------------|-------------------|----------:|
-|[get_browser()](http://php.net/get_browser)                |46.237493991852    |524288     |
-|[browscap-php](https://github.com/browscap/browscap-php)   | 0.95736503601074  |13369344   |
-|[crossjoin\Browscap](https://github.com/crossjoin/Browscap)| 2.8503410816193   |1310720    |
-|[ua-parser](https://github.com/tobie/ua-parser)            | 0.10208678245544  |786432     |
-|[woothee-php](https://github.com/woothee/woothee-php)      | 0.0087931156158447|524288     |
+|[get_browser()](http://php.net/get_browser)                |59.665177 |524288  |
+|[browscap-php](https://github.com/browscap/browscap-php)   | 4.9851598|50069504|
+|[crossjoin\Browscap](https://github.com/crossjoin/Browscap)| 4.6786639|1310720 |
+|[ua-parser](https://github.com/ua-parser/uap-php)          | 0.6419560|2097152 |
+|[woothee-php](https://github.com/woothee/woothee-php)      | 0.0876269|524288  |
+
+Note(1): These parsers have different functionality. Generally speaking, it has more functionality, it becomes slower.
+
+Note(2): This benchmark is designed to parse only one user agent with one parser instance.
 
 ## How to Benchmark
 
@@ -65,5 +67,5 @@ $ php bin/show-diff.php
 * http://php.net/get_browser
 * https://github.com/browscap/browscap-php
 * https://github.com/crossjoin/Browscap
-* https://github.com/tobie/ua-parser
+* https://github.com/ua-parser/uap-php
 * https://github.com/woothee/woothee-php
