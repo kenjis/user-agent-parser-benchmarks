@@ -1,5 +1,7 @@
 <?php
 
+ini_set('default_socket_timeout', 180);
+
 require __DIR__ . '/../config.php';
 
 $url = $config['baseUrl'];
